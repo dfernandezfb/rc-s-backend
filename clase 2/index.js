@@ -3,6 +3,7 @@ const app = express();
 const users = require('./routes/users');
 const countries = require('./routes/countries');
 const products = require('./routes/products');
+const brands = require('./routes/brands');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require("./config/db");
@@ -17,7 +18,8 @@ app.use(cors());
 
 app.use('/users', users);
 app.use('/countries', countries);
-app.use('/products', products)
+app.use('/products', products);
+app.use('/brands', brands)
 
 
 app.listen(process.env.PORT,()=>console.log('Escuchando...'))

@@ -7,10 +7,12 @@ const router = Router();
 // //! http://localhost:4500/users/
 router.get('/',getUsers)
 
-router.get('/argentina',(req,res)=>{
+router.get('/:pais?',(req,res)=>{
   res.send('Usuarios Argentinos')
 })
 //! http://localhost:4500/users/argentina
+//! http://localhost:4500/users/brasil
+//! http://localhost:4500/users/eeuu
 
 router.get('/name', getUsersByName)
 router.get('/young', getYoungUsers)
